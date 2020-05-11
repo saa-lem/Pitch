@@ -7,8 +7,8 @@ class TestPitch(unittest.TestCase):
 
     def setUp(self):
         self.user_salem = User(username='salem',password='password',email='abc@defg.com')
-        self.new_pitch = Pitch(pitch_content = "This is my pitch", pitch_category='Business',user=self.user_joe)
-        self.new_comment = Comment(comment_content = "This is my comment", user=self.user_joe)
+        self.new_pitch = Pitch(pitch_content = "This is my pitch", pitch_category='Business',user=self.user_salem)
+        self.new_comment = Comment(comment_content = "This is my comment", user=self.user_salem)
     
     def tearDown(self):
         db.session.delete(self)
