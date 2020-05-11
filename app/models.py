@@ -11,6 +11,7 @@ def load_user(user_id):
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
+    
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(255))
     hash_pass = db.Column(db.String(255))
@@ -58,7 +59,7 @@ class Pitch(db.Model):
         
     @classmethod
     def get_pitch(cls,id):
-        pitches = Pitch.query.filter_by(id=id).all()
+        pitches = Pitch.query.filter_by(id=id).first()
         return pitches
     
     @classmethod

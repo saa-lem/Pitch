@@ -2,7 +2,6 @@ from flask import render_template, request, redirect, url_for, flash, abort
 from . import main
 from ..models import User, Pitch, Comment,UpVote, DownVote
 from flask_login import login_required, current_user
-from .. import db, photos
 from .forms import PitchForm, CommentForm, UpdateProfile
 import markdown2
 
@@ -118,7 +117,7 @@ def pitch(id):
 
 @main.route('/category/<cat>')
 def category(cat):
-    my_category = Pitch.get_category(cat)
+    my_category = Pitch.get_all_pitches()
 
     title = f'{cat} category | One Minute Pitch'
 
