@@ -18,7 +18,7 @@ gyp==0.1
 ipaddress==1.0.17
 itsdangerous==0.24
 Jinja2==2.10
-Mako==1.1.2
+Mako==1.2.2
 MarkupSafe==1.1.0
 pyinotify==0.9.6
 pyOpenSSL==19.0.0
